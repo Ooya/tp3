@@ -154,7 +154,7 @@ void TriangleWindow::initialize()
     glOrtho(-1.0, 1.0, -1.0, 1.0, -100.0, 100.0);
 
 
-    loadMap(":/bureau256.png");
+    loadMap(":/heightmap-1.png");
 
 }
 
@@ -578,7 +578,7 @@ void TriangleWindow::displayColor(float alt)
 {
     if (alt > 0.2)
     {
-        glColor3f(01.0f, 1.0f, 1.0f);
+        glColor3f(1.0f, 1.0f, 1.0f);
     }
     else     if (alt > 0.1)
     {
@@ -586,7 +586,7 @@ void TriangleWindow::displayColor(float alt)
     }
     else     if (alt > 0.05f)
     {
-        glColor3f(01.0f, alt, alt);
+        glColor3f(1.0f, alt, alt);
     }
     else
     {
