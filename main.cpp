@@ -14,9 +14,12 @@
 
 #include <QtCore>
 #include <QtGui>
+
+#include "serveur.h"
+#include "client.h"
+#include "serveurwindow.h"
+
 using namespace std;
-
-
 
 struct point
 {
@@ -116,26 +119,32 @@ int main(int argc, char **argv)
     window.setPosition(0,0);
     window.show();
 
-    TriangleWindow window2(100);
+    TriangleWindow window2;
     window2.c = c;
     window2.setFormat(format);
     window2.resize(500,375);
     window2.setPosition(500, 0);
     window2.show();
 
-    TriangleWindow window3(500);
+    TriangleWindow window3;
     window3.c = c;
     window3.setFormat(format);
     window3.resize(500,375);
     window3.setPosition(0, 450);
     window3.show();
 
-    TriangleWindow window4(1000);
+    TriangleWindow window4;
     window4.c = c;
     window4.setFormat(format);
     window4.resize(500,375);
     window4.setPosition(500,450);
     window4.show();
+
+//    serveurwindow* serv = new serveurwindow();
+
+//    connect(serv,SIGNAL(changeSeason(int)),cl1,SLOT(s_changeS(int)));
+//    connect(serv,SIGNAL(changeSeason(int)),cl2,SLOT(s_changeS(int)));
+//    connect(serv,SIGNAL(changeSeason(int)),cl3,SLOT(s_changeS(int)));
 
     return app.exec();
 }
